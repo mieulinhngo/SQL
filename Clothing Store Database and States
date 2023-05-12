@@ -1,0 +1,17 @@
+--Create a clothing store database
+
+CREATE TABLE clothing (id integer primary key, item TEXT, quantity INTEGER, price INTEGER, statistic INTEGER);
+
+INSERT INTO clothing VALUES (1, "Shorts", 100, 4, 20);
+INSERT INTO clothing VALUES (2, "Shirts", 130, 7, 40);
+INSERT INTO clothing VALUES (3, "skirts", 120, 3, 60);
+INSERT INTO clothing VALUES (4, "Sunglasses", 110, 5, 80);
+INSERT INTO clothing VALUES (5, "Pants", 160, 10, 70);
+SELECT * FROM clothing;
+
+--display the database ordered by price.
+SELECT * FROM clothing ORDER BY price desc;
+
+--what are the most 3 rating items?
+SELECT item, price, statistic FROM clothing ORDER BY statistic desc limit 3;
+
